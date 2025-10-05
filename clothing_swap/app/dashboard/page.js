@@ -3,7 +3,7 @@
 'use client';
 
 import { useState } from 'react';
-import { useSession } from 'next-auth/react';
+import { useSession,signOut } from 'next-auth/react';
 import { useRouter } from 'next/navigation';
 import Navbar from '../components/Navbar';
 import { ShootingStars } from '../components/ui/ShootingStars';
@@ -129,6 +129,7 @@ export default function ProductUploadForm() {
           {message && <p className={`mt-4 text-sm ${message.startsWith('Error') ? 'text-red-600' : 'text-green-600'}`}>{message}</p>}
         </div>
       </div>
+      <button className='bg-red-800 p-10 absolute z-100 top-0' onClick={() => signOut()}></button>
     </div>
   );
 }

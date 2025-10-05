@@ -2,6 +2,8 @@
 
 import { useState } from "react";
 import { AnimatedTestimonialsDemo } from "@/app/components/AnimatedTestimonialsDemo";
+import Link from "next/link";
+import Navbar from "@/app/components/Navbar";
 export default function SignupPage() {
   const [form, setForm] = useState({ name: "", email: "", password: "" });
 
@@ -23,6 +25,7 @@ export default function SignupPage() {
 
   return (
     <div className="w-full relative h-screen bg-linear-to-l from-[#FBBA72] via-[#BB4D00] to-[#691E06]">
+      <Navbar/>
       <div className="w-1/3 bg-[#CA5310] rounded-4xl absolute m-40 p-10 text-black">
       <h2 className="font-mono text-center text-3xl font-bold">Signup</h2>
       <p className="text-center text-xl">We are happy to see you here and would like to see you either buy from us from any person willing to exchange or sell their clothes to with yours.</p>
@@ -62,7 +65,14 @@ export default function SignupPage() {
         />
         </div><br/>
         <button type="submit">Signup</button>
+
       </form>
+      <div className="flex justify-between">
+            <p>
+              Already have an account?
+            </p>
+            <Link className="decoration-dotted text-xl" href={'/login'}> Login</Link>
+            </div>
       </div>
       <div className="w-1/2 absolute right-20 top-32">
         <AnimatedTestimonialsDemo/>    

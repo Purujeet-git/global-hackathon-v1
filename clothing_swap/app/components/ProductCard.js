@@ -1,10 +1,11 @@
 import React from 'react'
 import Image from 'next/image'
+import Link from 'next/link';
 
 
 const ProductCard = ({product}) => {
 
-  const {name,price,images} = product;
+  const {_id,name,price,images} = product;
   console.log("Product Card received:", product);
   
   return (
@@ -14,7 +15,7 @@ const ProductCard = ({product}) => {
             <p>{name}</p>
             <p>₹ {price}</p>
         </div>
-        <button className='border-1 cursor-pointer text-2xl text-[#CA5310] mb-5 border-[#CA5310] rounded-4xl w-7/8 px-3'>View Details</button>
+        <Link href={`/products/${_id}`} ><button className='border-1 cursor-pointer text-2xl text-[#CA5310] mb-5 border-[#CA5310] rounded-4xl w-7/8 px-3'>View Details</button></Link>
     </div> 
   )
 }

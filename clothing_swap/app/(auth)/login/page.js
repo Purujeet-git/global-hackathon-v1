@@ -3,7 +3,7 @@
 import { AnimatedTestimonialsDemo } from "@/app/components/AnimatedTestimonialsDemo";
 import { signIn } from "next-auth/react";
 import { useState } from "react";
-
+import Link from "next/link";
 export default function LoginPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -54,6 +54,12 @@ export default function LoginPage() {
         </div><br/>
         <button className=" rounded-4xl w-2/3 p-4 bg-[#FBBA72]" type="submit">Login</button>
       </form>
+      <div className="flex justify-between">
+      <p>
+        New Here?<br/> Make a new account within Seconds
+      </p>
+      <Link className="decoration-dotted text-xl" href={'/signup'}> Signup</Link>
+      </div>
       </div>
       <div className="w-1/2 absolute right-20 top-32">
         <AnimatedTestimonialsDemo/>    

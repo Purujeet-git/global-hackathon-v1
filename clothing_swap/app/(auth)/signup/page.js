@@ -24,7 +24,7 @@ export default function SignupPage() {
   }
 
   return (
-    <div className="w-full relative h-screen bg-linear-to-l from-[#FBBA72] via-[#BB4D00] to-[#691E06]">
+    <div className="w-full relative h-[150vh] bg-linear-to-l from-[#FBBA72] via-[#BB4D00] to-[#691E06]">
       <Navbar/>
       <div className="w-1/3 bg-[#CA5310] rounded-4xl absolute m-40 p-10 text-black">
       <h2 className="font-mono text-center text-3xl font-bold">Signup</h2>

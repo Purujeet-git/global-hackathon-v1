@@ -3,6 +3,7 @@
 import { AnimatedTestimonialsDemo } from "@/app/components/AnimatedTestimonialsDemo";
 import { signIn } from "next-auth/react";
 import { useState } from "react";
+import Navbar from "@/app/components/Navbar";
 import Link from "next/link";
 export default function LoginPage() {
   const [email, setEmail] = useState("");
@@ -24,9 +25,9 @@ export default function LoginPage() {
   }
 
   return (
-    <div className="w-full relative h-screen bg-linear-to-l from-[#FBBA72] via-[#BB4D00] to-[#691E06]">
-      
-      <div className="w-1/3 bg-[#CA5310] rounded-4xl absolute m-40 p-10 text-black">
+    <div className="w-full relative h-[150vh] bg-linear-to-l from-[#FBBA72] via-[#BB4D00] to-[#691E06]">
+      <Navbar/>
+      <div className="w-1/3 bg-[#CA5310]  rounded-4xl absolute m-40 p-10 text-black">
       <h2 className="font-mono text-center text-3xl font-bold">Login to Buy Your Clothes</h2>
       <p className="text-center text-xl">We are happy to see you here and would like to see you either buy from us from any person willing to exchange or sell their clothes to with yours.</p>
       <form className="flex flex-col items-center" onSubmit={handleLogin}>
